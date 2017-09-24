@@ -1,10 +1,10 @@
-apply plugin: 'com.android.library'
+apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 26
     buildToolsVersion "26.0.1"
     defaultConfig {
-        //applicationId "com.example.stack.testlib"
+        applicationId "com.example.stack.testapp"
         minSdkVersion 15
         targetSdkVersion 26
         versionCode 1
@@ -16,10 +16,19 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
 }
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.android.support:design:26.+'
+
+    compile(name:'app-debug', ext:'aar')
 }
