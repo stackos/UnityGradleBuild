@@ -66,15 +66,6 @@ public class PlayerBuilder : EditorWindow {
 #if UNITY_ANDROID
         if(platform == PlayerBuilderConfig.PLATFORM_NAME_ANDROID) {
 			//m_debug_key = EditorGUILayout.Toggle("Debug Key", m_debug_key);
-			//if(!m_debug_key) {
-			//	EditorGUILayout.LabelField("Using Release Key");
-
-			//	EditorGUI.indentLevel = 2;
-			//	EditorGUILayout.LabelField(PlayerBuilderConfig.ANDROID_KEY_STORE);
-			//	EditorGUILayout.LabelField(PlayerBuilderConfig.ANDROID_KEY_STORE_PASSWORD);
-			//	EditorGUILayout.LabelField(PlayerBuilderConfig.ANDROID_KEY_ALIAS);
-			//	EditorGUILayout.LabelField(PlayerBuilderConfig.ANDROID_KEY_ALIAS_PASSWORD);
-			//}
 		}
 #endif
 
@@ -186,15 +177,6 @@ public class PlayerBuilder : EditorWindow {
 	}
 
 	void BuildAPKAnt(string project_path, string out_path, string project_name) {
-        if(!m_debug_key) {
-            string ant_properties = "";
-            ant_properties += PlayerBuilderConfig.ANDROID_KEY_STORE + "\r\n";
-            ant_properties += PlayerBuilderConfig.ANDROID_KEY_STORE_PASSWORD + "\r\n";
-            ant_properties += PlayerBuilderConfig.ANDROID_KEY_ALIAS + "\r\n";
-            ant_properties += PlayerBuilderConfig.ANDROID_KEY_ALIAS_PASSWORD + "\r\n";
-            File.WriteAllText(project_path + "/ant.properties", ant_properties);
-        }
-
         System.Diagnostics.ProcessStartInfo info = new System.Diagnostics.ProcessStartInfo();
         info.FileName = "cmd.exe";
         if(m_debug_key) {

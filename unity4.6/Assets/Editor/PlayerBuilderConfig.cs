@@ -8,15 +8,6 @@ public class PlayerBuilderConfig {
     public const string PLATFORM_NAME_IOS = "iOS";
 
 #if UNITY_ANDROID
-    public const string ANDROID_KEY_STORE =
-        "key.store=../../../../qlgame.key.android.123456";
-    public const string ANDROID_KEY_STORE_PASSWORD =
-        "key.store.password=123456";
-    public const string ANDROID_KEY_ALIAS =
-        "key.alias=android";
-    public const string ANDROID_KEY_ALIAS_PASSWORD =
-        "key.alias.password=123456";
-
     public static Channel[] GetChannels() {
         List<Channel> channels = new List<Channel>();
         Channel ch;
