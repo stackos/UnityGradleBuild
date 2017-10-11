@@ -134,6 +134,7 @@ public class PlayerBuilder : EditorWindow {
                     DirectoryCopy(project_path + "/assets", project_path_temp + "/src/main/assets");
 					DirectoryCopy(project_path + "/libs", project_path_temp + "/src/main/jniLibs");
 					DirectoryCopy(project_path + "/res", project_path_temp + "/src/main/res");
+					DirectoryCopy(project_path + "/src", project_path_temp + "/src/main/java");
 
 					var unity_jar_name = "unity-classes.jar";
 					var unity_jar = project_path_temp + "/src/main/jniLibs/" + unity_jar_name;

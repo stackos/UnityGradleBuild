@@ -1,0 +1,4 @@
+1.配置Android SDK目录环境变量：ANDROID_HOME
+2.设置gradle bin目录环境变量
+3.输出Android Studio工程目录：PlayerBuild/Android/bin/temp/
+4.输出APK目录：PlayerBuild/Android/bin/

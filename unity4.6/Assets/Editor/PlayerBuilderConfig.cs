@@ -19,7 +19,7 @@ public class PlayerBuilderConfig {
         ///  YouMe
         ch = new Channel();
         ch.name = "SparklingGame";
-        ch.template_project_name = "AndroidStudioProjectBase";
+        ch.template_project_name = "SparklingGameDemo";
         ch.enable = true;
         channels.Add(ch);
 
