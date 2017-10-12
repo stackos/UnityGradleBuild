@@ -1,4 +1,10 @@
 1.配置Android SDK目录环境变量：ANDROID_HOME
 2.设置gradle bin目录环境变量
-3.输出Android Studio工程目录：PlayerBuild/Android/bin/temp/
-4.输出APK目录：PlayerBuild/Android/bin/
+3.Unity工程切换到Android平台
+4.Build出现unable to list target platforms，是Android SDK的tools版本太新，
+去下载兼容Unity4.6的版本，https://dl.google.com/android/repository/tools_r25.2.3-windows.zip
+解压到Android SDK的目录，原来的tools目录改个别的名字
+5.编译完成出现，build failed错误日志，说明APK生成失败了，
+此时去PlayerBuild\Android\bin\temp找到目标Android Studio工程，
+用命令行cd到工程目录，gradle build查看输出信息，排查错误后重新打包
+6.打包成功输出APK目录：PlayerBuild/Android/bin/
